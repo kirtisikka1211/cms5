@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r requirements.txt
+script:
+  - python manage.py makemigrations debug attendance members status tasks password registration utilities
+  - python manage.py migrate
+  - python manage.py test
